@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+	background-image: linear-gradient(
+  		210deg,
+  		hsl(240deg 60% 80%) 0%,
+  		hsl(236deg 65% 75%) 21%,
+  		hsl(231deg 70% 70%) 30%,
+  		hsl(227deg 74% 65%) 39%,
+  		hsl(222deg 78% 60%) 46%,
+  		hsl(217deg 82% 55%) 54%,
+  		hsl(213deg 87% 50%) 61%,
+  		hsl(208deg 91% 45%) 69%,
+  		hsl(204deg 95% 41%) 79%,
+  		hsl(199deg 100% 36%) 100%
+    );
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title {
+	margin-bottom: 40px;
+	color: white;
+	font-size: 4rem;
+
+	@media (max-width: 425px){
+		font-size: 3rem;
+		margin-bottom: 30px;
+	}
+}
+.search-block {
+	background-color: white;
+	border-radius: 6px;
+	margin-bottom: 50px;
+}
+.input-city {
+	width: 310px;
+	border-radius: 6px;
+	border: none;
+	padding: 10px 15px;
+	font-size: 1rem;
+	outline: none;
+
+	@media (max-width: 425px){
+		width: 250px;
+	}
+	@media (max-width: 320px){
+		width: 170px;
+	}
+
+}
+.search-btn {
+	height: 55px;
+	border: none;
+	padding: 15px 30px;
+	border-radius: 6px;
+	background-color: #1b75ed;
+	color: white;
+	font-size: 1rem;
+	transition: 1s ease-out;
+
+	&:hover {
+		background-color: #005cd7;
+	}
+
+	@media (max-width: 320px){
+		height: 0;
+		line-height: 1px;
+		padding: 18px 30px;
+	}
+
+}
+.card-weather {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+	width: (280px + 35px);
+	background-color: #ffffff94;
+	border-radius: 6px;
+	box-shadow: 2px 17px 37px 0px rgba(0,0,0,0.75);
+	padding: 15px;
+	opacity: 0;
+  	animation: ani 2.5s forwards;
+  	@keyframes ani {
+  		0% {opacity: 0;}
+  		100% {opacity: 1;}
+	}
+
+	@media (max-width: 320px){
+		width: 270px;
+	}
+}
+.city-card {
+	font-size: 40px;
+}
+
+span {
+	display: block;
+	margin-top: 5px;
+
+	b {
+		color: #ec6e4c;
+	}
+}
+.weather-content__right {
+	position: relative;
+}
+img {
+	position: absolute;
+    top: -65px;
+    right: -58px;
+}
+.temp {
+	position: absolute;
+    top: 40px;
+    right: 5px;
+	font-size: 40px;
+	color: #ec6e4c;
+}
+
+sup {
+	font-size: 20px;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.7;
+		z-index: 0;
+	}
+}
+.modal-window {
+	position: relative;
+	z-index: 2;
+	border-radius: 6px;
+	box-shadow: 2px 17px 37px 0px rgba(0,0,0,0.75);
+	background-color: white;
+	padding: 30px;
+}
+.close {
+	position: absolute;
+    top: 0;
+    right: 5px;
+	border: none;
+	background: none;
+	font-size: 20px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.hidden {
+	display: none;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Weather</title>
+</head>
+<body>
+	
+<div class="wrapper">
+	<div class="container">
+	<h1 class="title">Weather</h1>
+	<form class="search-block">
+		<input class="input-city" placeholder="Put our city">
+		<button class="search-btn">Send</button>
+	</form>
+	<div class="card-weather hidden">
+		<div class="weather-content__left">
+			<p class="city-card">Los Angeles</p>
+			<span>Humidity <b class="humVal">92%</b></span>
+			<span>Wind <b class="windVal">1 m/s</b></span>
+		</div>
+		<div class="weather-content__right">
+			<img class="card-weather__img" src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+			<span class="temp">-43.5</span>
+		</div>
+	</div>
+	<div class="modal hidden">
+		<div class="modal-window">
+			<p>City it`s not found</p>
+			<button class="close">x</button>
+		</div>
+		<div class="overlay"></div>
+	</div>
+	</div>
+</div>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
