@@ -48,6 +48,8 @@
 	}
 }
 .search-block {
+	display: flex;
+    justify-content: space-between;
 	background-color: white;
 	border-radius: 6px;
 	margin-bottom: 50px;
@@ -130,6 +132,7 @@ img {
     right: -58px;
 }
 .temp {
+	display: flex;
 	position: absolute;
     top: 40px;
     right: 5px;

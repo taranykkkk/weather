@@ -53,6 +53,12 @@
 }
 
 .search-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: white;
   border-radius: 6px;
   margin-bottom: 50px;
@@ -162,6 +168,9 @@ img {
 }
 
 .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 40px;
   right: 5px;
